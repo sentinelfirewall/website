@@ -13,17 +13,17 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://yoururl.com"),
+  metadataBase: new URL("https://sentinel.host"),
   title: siteConfig.name,
   description: siteConfig.description,
-  keywords: ["Marketing", "Database", "Software"],
+  keywords: ["Firewall", "Hosting", "Server"],
   authors: [
     {
-      name: "yourname",
-      url: "",
+      name: "stefanpejcic",
+      url: "https://pejcic.rs",
     },
   ],
-  creator: "yourname",
+  creator: "stefanpejcic",
   openGraph: {
     type: "website",
     locale: "en_US",
