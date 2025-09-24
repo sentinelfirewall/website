@@ -1,7 +1,7 @@
 export const siteConfig = {
-  name: "Database",
-  url: "https://database.tremor.so",
-  description: "The database for modern applications.",
+  name: "Senitenl",
+  url: "https://sentinel.vercel.app",
+  description: "The firewall for webhosting servers.",
   baseLinks: {
     home: "/",
     about: "/about",
@@ -9,6 +9,8 @@ export const siteConfig = {
     pricing: "/pricing",
     imprint: "/imprint",
     privacy: "/privacy",
+    download: "/download",
+    license: "/license",
     terms: "/terms",
   },
 }
