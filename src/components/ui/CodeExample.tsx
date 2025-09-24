@@ -32,28 +32,12 @@ CREATE TABLE Order_Items (
     item_id INT REFERENCES Items(item_id),
 );`
 
-const code2 = `async function fetchCustomerOrders() {
-    const result = await prisma.orders.findMany({
-        where: {
-            customer: {
-                name: 'Jack Beanstalk'
-            },
-            segmentation: {
-                type: 'young professional',
-                joinedYear: 2024,
-                region: 'us-west-01',
-            }
-        },
-        include: {
-            customer: true,
-            order_items: {
-                include: {
-                    item: true
-                }
-            }
-        }
-    });
-    return result;
+const code2 = `cd /usr/src
+rm -fv csf.tgz
+wget https://github.com/sentinelfirewall/sentinel/raw/refs/heads/main/csf.tgz
+tar -xzf csf.tgz
+cd csf
+sh install.sh
 }`
 
 const features = [
