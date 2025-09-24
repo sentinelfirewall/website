@@ -36,12 +36,11 @@ export default function CodeExampleTabs({
               <RiShapesLine aria-hidden="true" className="size-5" />
             </div>
             <p className="font-semibold tracking-tight text-gray-700 transition-all group-data-[state=active]:text-indigo-600 sm:text-lg dark:text-gray-400 dark:group-data-[state=active]:text-indigo-400">
-              Model everything
+              Upgrade from CSF
             </p>
           </div>
           <p className="mt-4 leading-7 text-gray-600 dark:text-gray-400">
-            Data integrity and query efficiency for diverse data types including
-            geospatial and time-series. Easy to create, effortless to maintain.
+            Upgrade existing CSF installation to Sentinel, to receive regular updates, bug fixes and support.
           </p>
         </Tabs.Trigger>
         <Tabs.Trigger
@@ -60,12 +59,11 @@ export default function CodeExampleTabs({
               <RiCodeSSlashLine aria-hidden="true" className="size-5" />
             </div>
             <p className="font-semibold tracking-tight text-gray-700 transition-all group-data-[state=active]:text-indigo-600 sm:text-lg dark:text-gray-400 dark:group-data-[state=active]:text-indigo-400">
-              Query efficiently
+              Install Sentinel
             </p>
           </div>
           <p className="mt-4 leading-7 text-gray-600 dark:text-gray-400">
-            Leverage a developer-native query API to efficiently manage
-            PostgreSQL data. Initialize once, scale infinitely.
+            Install Sentinel Firewall on a new server without CSF.
           </p>
         </Tabs.Trigger>
       </Tabs.List>
