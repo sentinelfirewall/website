@@ -1,4 +1,3 @@
-import { RiPlayCircleFill } from "@remixicon/react"
 import Link from "next/link"
 import { Button } from "../Button"
 import HeroImage from "./HeroImage"
