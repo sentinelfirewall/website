@@ -20,15 +20,14 @@ export default function Hero() {
         className="mt-6 max-w-lg animate-slide-up-fade text-lg text-gray-700 dark:text-gray-400"
         style={{ animationDuration: "900ms" }}
       >
-        Database is a general purpose, relational database built for modern
-        application developers and for the cloud era.
+        A Stateful Packet Inspection (SPI) firewall, Login/Intrusion Detection and Security application for Linux servers.
       </p>
       <div
         className="mt-8 flex w-full animate-slide-up-fade flex-col justify-center gap-3 px-3 sm:flex-row"
         style={{ animationDuration: "1100ms" }}
       >
         <Button className="h-10 font-semibold">
-          <Link href="#">Start 14-day trial</Link>
+          <Link href="#">Free Download</Link>
         </Button>
         <Button
           asChild
