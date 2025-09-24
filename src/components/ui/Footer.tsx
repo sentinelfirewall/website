@@ -18,15 +18,15 @@ const navigation = {
   ],
   company: [
     { name: "About", href: "/about", external: false },
-    { name: "Careers", href: "#", external: true },
+    { name: "Legacy", href: "#", external: true },
     { name: "Contact", href: "#", external: false },
     { name: "Status", href: "#", external: false },
   ],
   legal: [
-    { name: "Imprint", href: "#", external: false },
+    { name: "Cookies", href: "#", external: false },
     { name: "Privacy", href: "#", external: false },
     { name: "Terms", href: "#", external: false },
-    { name: "DPA", href: "#", external: false },
+    { name: "License", href: "#", external: false },
   ],
 }
 
