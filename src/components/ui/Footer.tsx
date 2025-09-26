@@ -178,8 +178,7 @@ export default function Footer() {
         </div>
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-gray-200 pt-8 sm:mt-20 sm:flex-row lg:mt-24 dark:border-gray-800">
           <p className="text-sm leading-5 text-gray-500 dark:text-gray-400">
-            &copy; {new Date().getFullYear()} Database, Inc. All rights
-            reserved.
+            &copy; {new Date().getFullYear()} Sentinel Project. All rights reserved.
           </p>
           <div className="rounded-full border border-gray-200 py-1 pl-1 pr-2 dark:border-gray-800">
             <div className="flex items-center gap-1.5">
