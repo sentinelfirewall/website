@@ -65,11 +65,11 @@ export function Navigation() {
               </Link>
             </div>
           </nav>
-          <a href="https://github.com/sentinelfirewall/sentinel" target="_blank" className="hidden h-10 font-semibold md:flex">
+          <Button className="hidden h-10 font-semibold md:flex">
             Github
-          </a>
+          </Button>
           <div className="flex gap-x-2 md:hidden">
-            <a href="https://github.com/sentinelfirewall/sentinel" target="_blank">Github</a>
+            <Button">Github</Button>
             <Button
               onClick={() => setOpen(!open)}
               variant="light"
