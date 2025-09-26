@@ -53,9 +53,9 @@ export function Navigation() {
               </Link>
               <Link
                 className="px-2 py-1 text-gray-900 dark:text-gray-50"
-                href={siteConfig.baseLinks.pricing}
+                href={siteConfig.baseLinks.docs}
               >
-                Pricing
+                Docs
               </Link>
               <Link
                 className="px-2 py-1 text-gray-900 dark:text-gray-50"
@@ -65,11 +65,11 @@ export function Navigation() {
               </Link>
             </div>
           </nav>
-          <Button className="hidden h-10 font-semibold md:flex">
-            Book a demo
-          </Button>
+          <a href="https://github.com/sentinelfirewall/sentinel" target="_blank" className="hidden h-10 font-semibold md:flex">
+            Github
+          </a>
           <div className="flex gap-x-2 md:hidden">
-            <Button>Book demo</Button>
+            <a href="https://github.com/sentinelfirewall/sentinel" target="_blank">Github</a>
             <Button
               onClick={() => setOpen(!open)}
               variant="light"
@@ -94,7 +94,7 @@ export function Navigation() {
               <Link href={siteConfig.baseLinks.about}>About</Link>
             </li>
             <li onClick={() => setOpen(false)}>
-              <Link href={siteConfig.baseLinks.pricing}>Pricing</Link>
+              <Link href={siteConfig.baseLinks.docs}>Docs</Link>
             </li>
             <li onClick={() => setOpen(false)}>
               <Link href={siteConfig.baseLinks.changelog}>Changelog</Link>
