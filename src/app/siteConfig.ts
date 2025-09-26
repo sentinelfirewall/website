@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "Senitenl",
+  name: "Sentinel Firewall",
   url: "https://sentinel.vercel.app",
   description: "The firewall for webhosting servers.",
   baseLinks: {
