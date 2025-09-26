@@ -18,15 +18,15 @@ const navigation = {
   ],
   company: [
     { name: "About", href: "/about", external: false },
-    { name: "Legacy", href: "#", external: true },
-    { name: "Contact", href: "#", external: false },
-    { name: "Status", href: "#", external: false },
+    { name: "ConfigServer Legacy", href: "https://github.com/waytotheweb/scripts/", external: true },
+    { name: "Contributing", href: "https://github.com/sentinelfirewall/sentinel", external: true },
+    { name: "Contact", href: "/contact", external: false },
   ],
   legal: [
-    { name: "Cookies", href: "#", external: false },
-    { name: "Privacy", href: "#", external: false },
-    { name: "Terms", href: "#", external: false },
-    { name: "License", href: "#", external: false },
+    { name: "Cookies", href: "/legal/cookies", external: false },
+    { name: "Privacy", href: "/legal/privacy", external: false },
+    { name: "Terms", href: "/legal/terms", external: false },
+    { name: "License", href: "/llegal/icense", external: false },
   ],
 }
 
@@ -113,7 +113,7 @@ export default function Footer() {
             <div className="grid grid-cols-2 gap-8">
               <div>
                 <h3 className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-50">
-                  Company
+                  About
                 </h3>
                 <ul
                   role="list"
