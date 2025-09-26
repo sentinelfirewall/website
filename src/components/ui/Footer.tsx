@@ -5,16 +5,16 @@ import ThemeSwitch from "../ThemeSwitch"
 
 const navigation = {
   product: [
-    { name: "Enterprise", href: "#", external: false },
-    { name: "Pricing", href: "/pricing", external: false },
-    { name: "Docs", href: "#", external: false },
+    { name: "Installation", href: "/docs/install", external: false },
+    { name: "Upgrade from CSF", href: "/docs/update-from-csf", external: false },
+    { name: "Updates", href: "/doc/updates", external: false },
     { name: "Changelog", href: "/changelog", external: false },
   ],
   resources: [
-    { name: "FAQs", href: "/pricing#faq-title", external: false },
-    { name: "GitHub", href: "#", external: true },
-    { name: "Discord", href: "#", external: true },
-    { name: "YouTube", href: "#", external: true },
+    { name: "cPanel", href: "/docs/install/cpanel", external: false },
+    { name: "Webmin", href: "/docs/install/webmin", external: false },
+    { name: "OpenPanel", href: "/docs/install/openpanel", external: false },
+    { name: "Vesta", href: "/docs/install/vesta", external: false },
   ],
   company: [
     { name: "About", href: "/about", external: false },
@@ -38,8 +38,7 @@ export default function Footer() {
           <div className="space-y-8">
             <DatabaseLogo className="w-32 sm:w-40" />
             <p className="text-sm leading-6 text-gray-600 dark:text-gray-400">
-              Redefining the way databases are built and managed. Built in
-              Switzerland, made for the world.
+              A Stateful Packet Inspection (SPI) firewall, Login/Intrusion Detection and Security application for Linux servers.
             </p>
             <div className="flex space-x-6">
               <ThemeSwitch />
@@ -50,7 +49,7 @@ export default function Footer() {
             <div className="grid grid-cols-2 gap-8">
               <div>
                 <h3 className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-50">
-                  Product
+                  Get Started
                 </h3>
                 <ul
                   role="list"
@@ -81,12 +80,12 @@ export default function Footer() {
               </div>
               <div>
                 <h3 className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-50">
-                  Resources
+                  Control Panels
                 </h3>
                 <ul
                   role="list"
                   className="mt-6 space-y-4"
-                  aria-label="Quick links Resources"
+                  aria-label="Quick links CP"
                 >
                   {navigation.resources.map((item) => (
                     <li key={item.name} className="w-fit">
