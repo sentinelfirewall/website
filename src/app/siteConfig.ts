@@ -6,12 +6,11 @@ export const siteConfig = {
     home: "/",
     about: "/about",
     changelog: "/changelog",
-    pricing: "/pricing",
+    docs: "/docs",
     imprint: "/imprint",
-    privacy: "/privacy",
+    install: "/install",
     download: "/download",
     license: "/license",
-    terms: "/terms",
   },
 }
 
