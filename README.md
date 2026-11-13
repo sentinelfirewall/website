@@ -1,7 +1,7 @@
 
 # sentinelfirewall.org
 
-Repository for the sentinelfirewall.org website. This site is built with [Docusarus](https://docusaurus.io/).
+Repository for the sentinelfirewall.github.io website. This site is built with [Docusarus](https://docusaurus.io/).
 
 ## Running the site locally
 
@@ -27,7 +27,3 @@ To serve the generated static content:
 ```bash
 npm run serve
 ```
-
-
-#
-sentinelfirewall.github.io
