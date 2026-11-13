@@ -24,15 +24,15 @@ There are several restrictions to using this feature:
 5.  `mod_cloudflare` or similar must be used to report real IP in the Apache logs
 6.  `URLGET` must be set to 2 (i.e. LWP) must be used
 7.  If `PERMBLOCK` is used, the last tempblock will remain and never be cleared. So any CloudFlare Firewall entries must be manually cleared in CloudFlare or via CLI
-8.  There are restrictions imposed by CloudFlare to the number of rules that can be created depending on the type of account used. See [Cloudflare IP Access rules](https://sentinelfirewall.org/redirect?to=https://developers.cloudflare.com/waf/tools/ip-access-rules/] for more information
+8.  There are restrictions imposed by CloudFlare to the number of rules that can be created depending on the type of account used. See [Cloudflare IP Access rules](/redirect/?to=https://developers.cloudflare.com/waf/tools/ip-access-rules/] for more information
 9.  When restarting csf, any old temporary blocks will still be created for lfd to clear when it restarts
 10. All interaction with CloudFlare is at *User-level*, not *Zone-level*
 
-`CF_TEMP` should be configured taking into account the maximum number of rules that the CloudFlare account allows: [https://developers.cloudflare.com/waf/tools/ip-access-rules/](https://sentinelfirewall.org/redirect?to=https://developers.cloudflare.com/waf/tools/ip-access-rules/)
+`CF_TEMP` should be configured taking into account the maximum number of rules that the CloudFlare account allows: [https://developers.cloudflare.com/waf/tools/ip-access-rules/](/redirect/?to=https://developers.cloudflare.com/waf/tools/ip-access-rules/)
 
 All CloudFlare users for the domains that are involved in `LF_MODSEC` and `LF_CXS` triggers will have a CloudFlare rule added. Any CloudFlare account configured to use the special case "*any*" field value in `csf.cloudflare` will have a CloudFlare rule added regardless of domain.
 
-> **NOTE**: You should always list the CloudFlare IP addresses in `/etc/csf/csf.ignore` to prevent them from being blocked by lfd from [https://www.cloudflare.com/ips/](https://sentinelfirewall.org/redirect?to=https://www.cloudflare.com/ips/)
+> **NOTE**: You should always list the CloudFlare IP addresses in `/etc/csf/csf.ignore` to prevent them from being blocked by lfd from [https://www.cloudflare.com/ips/](/redirect/?to=https://www.cloudflare.com/ips/)
 
 
 ## CLI commands

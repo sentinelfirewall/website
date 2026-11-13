@@ -98,6 +98,7 @@ async function latestSentinelVersion(): Promise<string> {
 
 const config = (async (): Promise<Config> => {
   const sentinelVersion = await latestSentinelVersion();
+  const baseUrl = process.env.NODE_ENV === 'development' ? '/' : '/website/';
   return {
     title: 'Sentinel Firewall',
     tagline: 'The firewall for Web Hosting & Self-Hosting',
@@ -112,7 +113,7 @@ const config = (async (): Promise<Config> => {
       v4: true,
     },
     url: siteBaseUrl(),
-    baseUrl: process.env.NODE_ENV === 'development' ? '/' : '/website/',
+    baseUrl,
     organizationName: 'sentinelfirewall',
     projectName: 'website',
     trailingSlash: true,
@@ -198,6 +199,19 @@ const config = (async (): Promise<Config> => {
           pixelId: process.env.SCARF_PIXEL_ID || 'localdev',
         } satisfies PluginScarfAnalyticsOptions,
       ],
+      [
+        '@easyops-cn/docusaurus-search-local',
+        {
+          hashed: true,
+          indexDocs: true,
+          indexBlog: true,
+          indexPages: false,
+          docsRouteBasePath: '/docs',
+          blogRouteBasePath: '/blog',
+          highlightSearchTermsOnTargetPage: true,
+          explicitSearchResultPath: true,
+        },
+      ],
       customPostCssPlugin, // PostCSS plugin function registration
     ],
 
@@ -233,7 +247,7 @@ const config = (async (): Promise<Config> => {
       },
        announcementBar: {
          id: 'announcement',
-         content: `<a href="/docs/upgrade-from-csf/">📢 ConfigServer shutdown - Easily migrate from ConfigServer Security&Firewall (CSF) to Sentinel</a>`,
+         content: `<a href="${baseUrl}docs/upgrade-from-csf/">📢 ConfigServer shutdown - Easily migrate from ConfigServer Security&Firewall (CSF) to Sentinel</a>`,
        },
       footer: {
         links: [
@@ -274,11 +288,6 @@ const config = (async (): Promise<Config> => {
           },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Sentinel Project - All rights reserved. “ConfigServer” is a trademark of Way to the Web Limited.`,
-      },
-      algolia: {
-        apiKey: 'd2762d518bb51ac3878db9ad955bc979',
-        indexName: 'sentinel_docs_pages',
-        appId: 'QIKF8F986S',
       },
     } satisfies PresetClassicThemeConfig,
 

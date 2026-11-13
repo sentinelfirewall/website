@@ -7,7 +7,7 @@ sidebar_position: 17
 
 This option configures iptables to offer port knocking to open sensitive ports based on a sequence of knocked ports for the connecting IP address.
 
-For more information on the idea of port knocking see: [https://wiki.archlinux.org/title/Port_knocking](https://sentinelfirewall.org/redirect?to=https://wiki.archlinux.org/title/Port_knocking)
+For more information on the idea of port knocking see: [https://wiki.archlinux.org/title/Port_knocking](/redirect/?to=https://wiki.archlinux.org/title/Port_knocking)
 
 The feature requires that you list a random selection of unused ports (at least 3) with a timeout. The ports you choose must not be in use and not appear in `TCP_IN` (`UDP_IN` for udp packets). The port to be opened must also not appear in `TCP_IN` (`UDP_IN` for udp packets).
 
@@ -30,7 +30,7 @@ Open Port 22 TCP for 20 seconds to the connecting IP address to new connections 
 
 Access to port 22 remains active after 20 seconds until the connection is dropped, however new connections will not be allowed.
 
-More information about the ipt_recent module can be found in the iptables man page and at [https://www.snowman.net/projects/ipt_recent/](https://sentinelfirewall.org/redirect?to=https://www.snowman.net/projects/ipt_recent/)
+More information about the ipt_recent module can be found in the iptables man page and at [https://www.snowman.net/projects/ipt_recent/](/redirect/?to=https://www.snowman.net/projects/ipt_recent/)
 
 Note: IP addresses do not appear in any of the iptables chains when using this module. You must view the `/proc/net/ipt_recent/` files as per the module documentation to view IP addresses in the various stages of the knock.
 

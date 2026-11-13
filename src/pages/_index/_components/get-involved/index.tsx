@@ -35,7 +35,7 @@ function GetInvolved({
   heading = DEFAULT_PROPS.heading,
   intro = DEFAULT_PROPS.intro,
 }: Props) {
-  const { PLAYLIST, GITHUB, SLACK } = Links;
+  const { GITHUB } = Links;
 
   return (
     <Section color={color} id="community">

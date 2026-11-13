@@ -29,7 +29,7 @@ There is another option, `CLUSTER_NAT` that should be used if the IP address of 
 
 The `CLUSTER_PORT` must be set to the same port on all servers. The port should NOT be opened in `TCP_IN` or `TCP_OUT` as csf will automatically add appropriate in and out bound rules to allow communication between cluster members.
 
-The `CLUSTER_KEY` is a secret key used to encrypt cluster communications using [the Blowfish algorithm](https://sentinelfirewall.org/redirect?to=https://en.wikipedia.org/wiki/Blowfish_(cipher)). It should be between `8` and `56` ASCII characters long, longer is better, and must be the same on all members of the cluster.
+The `CLUSTER_KEY` is a secret key used to encrypt cluster communications using [the Blowfish algorithm](/redirect/?to=https://en.wikipedia.org/wiki/Blowfish_(cipher)). It should be between `8` and `56` ASCII characters long, longer is better, and must be the same on all members of the cluster.
 
 This key must be kept secret!
 

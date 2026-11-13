@@ -3,7 +3,7 @@ import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 import Link from '@docusaurus/Link';
 
-const DEFAULT_REDIRECT = 'https://openpanel.com?utm_source=sentinelfirewall.org';
+const DEFAULT_REDIRECT = 'https://openpanel.com?utm_source=sentinelfirewall.github.io';
 
 function ContactForm() {
   const [redirectUrl, setRedirectUrl] = React.useState(DEFAULT_REDIRECT);
@@ -37,7 +37,7 @@ function ContactForm() {
           as="h1"
           style={{ textAlign: 'center', marginBottom: 'calc(var(--ifm-leading) * 2)' }}
         >
-          You are leaving sentinelfirewall.org
+          You are leaving the Sentinel Firewall website
         </Heading>
 
         <p style={{ textAlign: 'center', marginBottom: '1rem' }}>
