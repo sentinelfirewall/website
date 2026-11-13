@@ -5,6 +5,12 @@ on:
     branches:
       - main
   workflow_dispatch:
+  # Rebuild periodically so the version in the navbar follows new Sentinel releases
+  schedule:
+    - cron: '0 */6 * * *'
+  # Allows the sentinel repo to trigger a rebuild on release (event type: sentinel-release)
+  repository_dispatch:
+    types: [sentinel-release]
 
 permissions:
   contents: read
@@ -33,6 +39,8 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

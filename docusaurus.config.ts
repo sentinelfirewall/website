@@ -63,11 +63,46 @@ function siteBaseUrl() {
   return 'https://sentinelfirewall.github.io';
 }
 
+// Fallback used only if GitHub can't be reached at build time.
+const FALLBACK_VERSION = '15.17';
+
+// Fetch the latest Sentinel version from GitHub at build time.
+// Order: env override -> csf/version.txt on main -> latest release tag -> fallback.
+async function latestSentinelVersion(): Promise<string> {
+  if (process.env.SENTINEL_VERSION) return process.env.SENTINEL_VERSION.trim();
+  const headers: Record<string, string> = { 'User-Agent': 'sentinel-website-build' };
+  if (process.env.GITHUB_TOKEN) headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
+  try {
+    const res = await fetch(
+      'https://raw.githubusercontent.com/sentinelfirewall/sentinel/main/csf/version.txt',
+      { headers, signal: AbortSignal.timeout(10000) },
+    );
+    if (res.ok) {
+      const v = (await res.text()).trim();
+      if (/^\d+(\.\d+)+$/.test(v)) return v;
+    }
+  } catch {}
+  try {
+    const res = await fetch(
+      'https://api.github.com/repos/sentinelfirewall/sentinel/releases/latest',
+      { headers, signal: AbortSignal.timeout(10000) },
+    );
+    if (res.ok) {
+      const tag = String((await res.json()).tag_name ?? '').replace(/^v/, '').trim();
+      if (tag) return tag;
+    }
+  } catch {}
+  console.warn(`[version] Could not fetch Sentinel version from GitHub, using ${FALLBACK_VERSION}`);
+  return FALLBACK_VERSION;
+}
+
 const config = (async (): Promise<Config> => {
+  const sentinelVersion = await latestSentinelVersion();
   return {
     title: 'Sentinel Firewall',
     tagline: 'The firewall for Web Hosting & Self-Hosting',
     customFields: {
+      sentinelVersion,
       description: 'The secure, distributed, WebAssembly application platform',
       tagline_1: 'Build applications in any language.',
       tagline_2: 'Deploy them anywhere.',
@@ -116,7 +151,7 @@ const config = (async (): Promise<Config> => {
             lastVersion: 'current',
             versions: {
               current: {
-                label: '15.12',
+                label: sentinelVersion,
               },
             },
           },
