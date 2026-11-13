@@ -1,14 +1,14 @@
 {
-  "name": "@wasmcloud/docusaurus-seo-checks",
+  "name": "@sentinelfirewall/docusaurus-seo-checks",
   "version": "0.0.0",
   "private": true,
   "description": "",
   "main": "src/index.ts",
   "type": "module",
-  "author": "@wasmcloud",
+  "author": "Sentinel Firewall",
   "license": "Apache-2.0",
   "dependencies": {
-    "@wasmcloud/docusaurus-helpers": "0.0.0"
+    "@sentinelfirewall/docusaurus-helpers": "0.0.0"
   },
   "devDependencies": {
     "@types/common-tags": "^1.8.4"

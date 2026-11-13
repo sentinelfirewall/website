@@ -1,20 +1,15 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 import styles from './styles.module.css';
-import { CaseStudies } from './_components/case-studies';
+import { BlogTeaser } from './_components/blog-teaser';
 import { GetInvolved } from './_components/get-involved';
 import { GetStarted } from './_components/get-started';
 import { Hero } from './_components/hero';
-import { Kubernetes } from './_components/kubernetes';
-import { PlatformEngineering } from './_components/platform-engineering';
-import { WasmCloudEcosystem } from './_components/wasmcloud-ecosystem';
-import { WasmCloudSolves } from './_components/wasmcloud-solves';
-import { WasmCloudTechnology } from './_components/wasmcloud-technology';
-import { WebAssemblyComponents } from './_components/webassembly-components';
-import { WhatIsWasmCloud } from './_components/what-is-wasmcloud';
-import { WhyUseWasmCloud } from './_components/why-use-wasmcloud';
+import { SentinelSolves } from './_components/sentinel-solves';
+import { WhatIsSentinel } from './_components/what-is-sentinel';
+import { WhyUseSentinel } from './_components/why-use-sentinel';
 
-function ContactForm() {
+function Home() {
   return (
     <Layout
       title={`Sentinel Firewall - The Firewall for Web & Self-Hosting`}
@@ -23,21 +18,14 @@ function ContactForm() {
     >
       <main className={styles.main}>
         <Hero />
-        <WasmCloudSolves />
-        <WhatIsWasmCloud />
-        <WhyUseWasmCloud />
-        {/*<PlatformEngineering /> */}
-        {/* TODO: enable once video is produced */}
-        {/* <WasmCloudTechnology /> */}
-        <WebAssemblyComponents />
+        <SentinelSolves />
+        <WhatIsSentinel />
+        <WhyUseSentinel />
+        <BlogTeaser />
         <GetInvolved />
-        {/* TODO: enable once case studies are approved */}
-        {/* <CaseStudies /> */}
-        {/* <Kubernetes />*/}
-        {/* <WasmCloudEcosystem />*/}
         <GetStarted />
       </main>
     </Layout>
   );
 }
-export default ContactForm;
+export default Home;

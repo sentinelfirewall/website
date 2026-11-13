@@ -1,3 +1,3 @@
-import { getPluginName } from '@wasmcloud/docusaurus-helpers';
+import { getPluginName } from '@sentinelfirewall/docusaurus-helpers';
 
 export const PLUGIN_NAME = getPluginName(__dirname);

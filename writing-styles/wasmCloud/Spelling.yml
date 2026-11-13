@@ -1,7 +1,0 @@
-extends: spelling
-message: "'%s' is a typo!"
-dicpath: dictionaries
-dictionaries:
-  - en_US
-  - wasmCloud-dictionary
-

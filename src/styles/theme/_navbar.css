@@ -167,7 +167,7 @@ body:has(.navbar-glass) .navbar::before {
 
 /* docs version picker */
 .navbar__item:has(.navbar__link--version-dropdown) {
-  border: 1px solid var(--wasmcloud-color-brand-green);
+  border: 1px solid var(--sentinel-color-brand-green);
   font-size: 0.7em;
   border-radius: 999px;
   padding: 0.1em 0.7em;

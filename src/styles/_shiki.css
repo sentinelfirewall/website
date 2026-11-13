@@ -39,7 +39,7 @@
 }
 
 .shiki .line.highlighted {
-  background-color: var(--wasmcloud-code-highlight);
+  background-color: var(--sentinel-code-highlight);
 }
 
 /* diff */
@@ -60,19 +60,19 @@
 }
 
 .shiki .line.diff.add {
-  background-color: var(--wasmcloud-code-diff-add-bg);
+  background-color: var(--sentinel-code-diff-add-bg);
 }
 .shiki .line.diff.add::before {
-  color: var(--wasmcloud-code-diff-add);
+  color: var(--sentinel-code-diff-add);
   content: '+';
 }
 
 .shiki .line.diff.remove {
-  background-color: var(--wasmcloud-code-diff-remove-bg);
+  background-color: var(--sentinel-code-diff-remove-bg);
   user-select: none;
 }
 .shiki .line.diff.remove::before {
-  color: var(--wasmcloud-code-diff-remove);
+  color: var(--sentinel-code-diff-remove);
   content: '-';
 }
 

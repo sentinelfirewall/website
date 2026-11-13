@@ -1,5 +1,5 @@
 *:focus {
-  outline: 2px solid var(--wasmcloud-color-brand-green);
+  outline: 2px solid var(--sentinel-color-brand-green);
 }
 
 .main-wrapper {

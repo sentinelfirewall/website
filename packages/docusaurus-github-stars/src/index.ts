@@ -1,7 +1,7 @@
 import logger from '@docusaurus/logger';
 import { LoadContext, Plugin } from '@docusaurus/types';
 import { Octokit } from '@octokit/rest';
-import { getPluginName } from '@wasmcloud/docusaurus-helpers';
+import { getPluginName } from '@sentinelfirewall/docusaurus-helpers';
 import { PluginOptions } from './options';
 
 export const PLUGIN_NAME = getPluginName(__dirname);

@@ -1,5 +1,5 @@
 {
-  "name": "wasmcloud.com",
+  "name": "sentinel-website",
   "version": "0.1.0",
   "license": "Apache-2.0",
   "scripts": {
@@ -20,15 +20,13 @@
     "@docusaurus/preset-classic": "^3.8.0",
     "@easyops-cn/docusaurus-search-local": "^0.52.3",
     "@mdx-js/react": "^3.1.0",
+    "@sentinelfirewall/docusaurus-github-stars": "0.0.0",
+    "@sentinelfirewall/docusaurus-seo-checks": "0.0.0",
     "@shikijs/rehype": "~3.4.2",
     "@shikijs/transformers": "~3.4.2",
-    "@wasmcloud/docusaurus-github-stars": "0.0.0",
-    "@wasmcloud/docusaurus-scarf-analytics": "0.0.0",
-    "@wasmcloud/docusaurus-seo-checks": "0.0.0",
     "clsx": "^2.1.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-hubspot-form": "^1.3.7",
     "react-player": "^2.16.0",
     "rehype-name-to-id": "0.0.0",
     "shiki": "~3.4.2"

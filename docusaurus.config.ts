@@ -6,10 +6,8 @@ import {
 } from '@docusaurus/preset-classic';
 import { Options as PluginContentBlogOptions } from '@docusaurus/plugin-content-blog';
 import { Options as PluginGoogleAnalyticsOptions } from '@docusaurus/plugin-google-analytics';
-import { Options as PluginGithubStarsOptions } from '@wasmcloud/docusaurus-github-stars';
-import { Options as PluginHubspotAnalyticsOptions } from '@wasmcloud/docusaurus-hubspot-analytics';
-import { Options as PluginSEOChecksOptions } from '@wasmcloud/docusaurus-seo-checks';
-import { Options as PluginScarfAnalyticsOptions } from '@wasmcloud/docusaurus-scarf-analytics';
+import { Options as PluginGithubStarsOptions } from '@sentinelfirewall/docusaurus-github-stars';
+import { Options as PluginSEOChecksOptions } from '@sentinelfirewall/docusaurus-seo-checks';
 import rehypeShiki, { RehypeShikiOptions } from '@shikijs/rehype';
 import { bundledLanguages } from 'shiki';
 import {
@@ -43,8 +41,6 @@ const rehypeShikiPlugin = [
     ],
     langs: [
       ...(Object.keys(bundledLanguages) as Array<keyof typeof bundledLanguages>),
-      import('./languages/wit.tmLanguage.json'),
-      import('./languages/smithy.tmLanguage.json'),
     ],
   } as RehypeShikiOptions,
 ];
@@ -52,13 +48,6 @@ const rehypeShikiPlugin = [
 function siteBaseUrl() {
   if (process.env.NODE_ENV === 'development') {
     return 'http://localhost:3000';
-  }
-  if (
-    process.env.NETLIFY &&
-    process.env.CONTEXT === 'deploy-preview' &&
-    process.env.DEPLOY_PRIME_URL
-  ) {
-    return process.env.DEPLOY_PRIME_URL;
   }
   return 'https://sentinelfirewall.github.io';
 }
@@ -104,9 +93,6 @@ const config = (async (): Promise<Config> => {
     tagline: 'The firewall for Web Hosting & Self-Hosting',
     customFields: {
       sentinelVersion,
-      description: 'The secure, distributed, WebAssembly application platform',
-      tagline_1: 'Build applications in any language.',
-      tagline_2: 'Deploy them anywhere.',
     },
     future: {
       experimental_faster: true,
@@ -140,8 +126,8 @@ const config = (async (): Promise<Config> => {
             beforeDefaultRehypePlugins: [rehypeShikiPlugin],
             rehypePlugins: [rehypeNameToId],
             authorsMapPath: '../authors.yml', // relative to blog directory
-            blogListComponent: '@theme/wasmcloud/blog/list-page',
-            blogPostComponent: '@theme/wasmcloud/blog/post-page',
+            blogListComponent: '@theme/sentinel/blog/list-page',
+            blogPostComponent: '@theme/sentinel/blog/post-page',
             onInlineAuthors: 'throw',
             onUntruncatedBlogPosts: 'ignore',
           },
@@ -169,13 +155,13 @@ const config = (async (): Promise<Config> => {
 
     plugins: [
       [
-        '@wasmcloud/docusaurus-github-stars',
+        '@sentinelfirewall/docusaurus-github-stars',
         {
           preloadRepo: 'sentinelfirewall/sentinel',
         } satisfies PluginGithubStarsOptions,
       ],
       [
-        '@wasmcloud/docusaurus-seo-checks',
+        '@sentinelfirewall/docusaurus-seo-checks',
         {
           underscores: { level: 'error' },
         } satisfies PluginSEOChecksOptions,
@@ -186,18 +172,6 @@ const config = (async (): Promise<Config> => {
           trackingID: process.env.GOOGLE_ANALYTICS_ID || 'localdev',
           anonymizeIP: true,
         } satisfies PluginGoogleAnalyticsOptions,
-      ],
-      [
-        '@wasmcloud/docusaurus-hubspot-analytics',
-        {
-          hubspotId: process.env.HUBSPOT_ID || 'localdev',
-        } satisfies PluginHubspotAnalyticsOptions,
-      ],
-      [
-        '@wasmcloud/docusaurus-scarf-analytics',
-        {
-          pixelId: process.env.SCARF_PIXEL_ID || 'localdev',
-        } satisfies PluginScarfAnalyticsOptions,
       ],
       [
         '@easyops-cn/docusaurus-search-local',
@@ -282,7 +256,7 @@ const config = (async (): Promise<Config> => {
               },
               {
                 label: 'Contact',
-                to: '/contact',
+                href: 'https://github.com/sentinelfirewall/sentinel/issues',
               },
             ],
           },

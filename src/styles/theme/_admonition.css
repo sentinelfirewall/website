@@ -1,4 +1,4 @@
 .theme-admonition {
-  --ifm-heading-font-family: var(--wasmcloud-font-base);
+  --ifm-heading-font-family: var(--sentinel-font-base);
   --ifm-heading-font-weight: 600;
 }

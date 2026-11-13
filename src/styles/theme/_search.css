@@ -32,7 +32,7 @@
 }
 .DocSearch.DocSearch-Button:focus {
   box-shadow: none;
-  outline: 2px solid var(--wasmcloud-color-brand-green);
+  outline: 2px solid var(--sentinel-color-brand-green);
 }
 
 .DocSearch.DocSearch-Button .DocSearch-Search-Icon {
