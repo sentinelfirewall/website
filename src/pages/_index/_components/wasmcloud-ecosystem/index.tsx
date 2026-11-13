@@ -6,6 +6,7 @@ import { Section } from '@site/src/pages/_components/section';
 import { SectionContent } from '@site/src/pages/_components/section-content';
 import { SectionHeading } from '@site/src/pages/_components/section-heading';
 import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 type Props = {};
 
@@ -25,12 +26,12 @@ function WasmCloudEcosystem({}: Props) {
       <SectionContent align="center" hasContainer={false}>
         <div className={styles.graphic}>
           <div className={styles.callout} data-before>
-            <img src="/pages/home/wasmcloud-ecosystem/arrow-1.svg" alt="" />
+            <img src={useBaseUrl('/pages/home/wasmcloud-ecosystem/arrow-1.svg')} alt="" />
             <span>works with this</span>
           </div>
           <LogoScroller />
           <div className={styles.callout} data-after>
-            <img src="/pages/home/wasmcloud-ecosystem/arrow-2.svg" alt="" />
+            <img src={useBaseUrl('/pages/home/wasmcloud-ecosystem/arrow-2.svg')} alt="" />
             <span>and this</span>
           </div>
         </div>

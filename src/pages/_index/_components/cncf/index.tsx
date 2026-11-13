@@ -4,6 +4,7 @@ import { Section } from '@site/src/pages/_components/section';
 import { SectionContent } from '@site/src/pages/_components/section-content';
 import { SectionHeading } from '@site/src/pages/_components/section-heading';
 import styles from './cncf.module.css';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 type Props = {};
 
@@ -16,7 +17,7 @@ function Cncf({}: Props) {
             wasmCloud is a <Link href="https://www.cncf.io/">Cloud Native Computing Foundation</Link> Incubating project
           </p>
         </SectionHeading>
-        <img src="/pages/home/cncf/cncf-white.svg" alt="Cloud Native Computing Foundation" />
+        <img src={useBaseUrl('/pages/home/cncf/cncf-white.svg')} alt="Cloud Native Computing Foundation" />
       </SectionContent>
     </Section>
   );

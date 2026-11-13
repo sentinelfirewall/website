@@ -8,6 +8,7 @@ import { SectionContent } from '@site/src/pages/_components/section-content';
 import SvgCost from '@site/static/pages/home/icon/cost.svg';
 import SvgUpdates from '@site/static/pages/home/icon/updates.svg';
 import SvgDistributed from '@site/static/pages/home/icon/distributed.svg';
+import Link from '@docusaurus/Link';
 
 type Props = {
   color?: SectionColor;
@@ -40,7 +41,7 @@ function WasmCloudSolves({ color = 'light-gray' }: Props) {
             <SvgDistributed style={{ color: 'var(--section-color-highlight)' }} />
             <h4>security tools</h4>
             <p>
-              A suite of security tools: block lists, mod_security log reporting, exploit checks, system alerts.. <a href="/docs/features">and more</a>
+              A suite of security tools: block lists, mod_security log reporting, exploit checks, system alerts.. <Link to="/docs/features">and more</Link>
             </p>
           </GridItem>
         </Grid>

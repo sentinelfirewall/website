@@ -60,7 +60,7 @@ function siteBaseUrl() {
   ) {
     return process.env.DEPLOY_PRIME_URL;
   }
-  return 'https://sentinelfirewall.org';
+  return 'https://sentinelfirewall.github.io';
 }
 
 const config = (async (): Promise<Config> => {
@@ -77,7 +77,9 @@ const config = (async (): Promise<Config> => {
       v4: true,
     },
     url: siteBaseUrl(),
-    baseUrl: '/',
+    baseUrl: process.env.NODE_ENV === 'development' ? '/' : '/sentinelfirewall.org/',
+    organizationName: 'sentinelfirewall',
+    projectName: 'sentinelfirewall.org',
     trailingSlash: true,
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',

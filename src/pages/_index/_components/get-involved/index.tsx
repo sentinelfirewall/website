@@ -7,6 +7,7 @@ import { Links } from '@site/src/constants';
 import { SectionContent } from '@site/src/pages/_components/section-content';
 import Link from '@docusaurus/Link';
 import { Grid, GridItem } from '@site/src/pages/_components/grid';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 type Props = {
   color?: SectionColor;
@@ -49,7 +50,7 @@ function GetInvolved({
             <ul className={styles.list}>
               <li>
                 <Link href={GITHUB}>
-                  <img src="/pages/home/icon/github.svg" alt="" />
+                  <img src={useBaseUrl('/pages/home/icon/github.svg')} alt="" />
                   <span>Star project on GitHub</span>
                 </Link>
               </li>

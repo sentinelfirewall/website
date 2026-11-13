@@ -11,6 +11,7 @@ import BlogListPageStructuredData from '@theme/BlogListPage/StructuredData';
 import styles from './styles.module.css';
 import BlogPostListItem from '../list-item';
 import Layout from '@theme/Layout';
+import { useBaseUrlUtils } from '@docusaurus/useBaseUrl';
 
 function BlogListPageMetadata(props: Props): JSX.Element {
   const { metadata } = props;
@@ -31,6 +32,7 @@ function BlogListPageMetadata(props: Props): JSX.Element {
 function BlogListPageContent(props: Props): JSX.Element {
   const { metadata, items, sidebar } = props;
   const isFirstPage = metadata.page === 1;
+  const { withBaseUrl } = useBaseUrlUtils();
   return (
     <Layout>
       <div className="container margin-bottom--xl">
@@ -45,11 +47,11 @@ function BlogListPageContent(props: Props): JSX.Element {
                   <div className="col col--4">
                     <p className={styles.description}>
                       {metadata.blogDescription} Subscribe via{' '}
-                      <a href="/blog/rss.xml" target="_blank">
+                      <a href={withBaseUrl('/blog/rss.xml')} target="_blank">
                         RSS
                       </a>
                       ,{' '}
-                      <a href="/blog/atom.xml" target="_blank">
+                      <a href={withBaseUrl('/blog/atom.xml')} target="_blank">
                         Atom
                       </a>{' '}
                       or{' '}

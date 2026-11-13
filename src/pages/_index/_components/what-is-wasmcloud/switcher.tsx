@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState } from 'react';
 import styles from './switcher.module.css';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 const SwitcherContext = createContext<{
   active: string;
@@ -20,13 +21,14 @@ function Switcher({ defaultValue, children }: React.PropsWithChildren<{ defaultV
 }
 
 function SwitcherList({ className, children }: React.PropsWithChildren<{ className?: string }>) {
+  const arrowSrc = useBaseUrl('/pages/home/icon/arrow.svg');
   const childrenArray = React.Children.toArray(children);
   const separatedChildren = childrenArray.reduce((acc: Array<typeof child>, child, index) => {
     if (index !== childrenArray.length - 1) {
       acc.push(
         child,
         <img
-          src="/pages/home/icon/arrow.svg"
+          src={arrowSrc}
           className={styles.arrow}
           key={`arrow-${index}`}
           alt=""

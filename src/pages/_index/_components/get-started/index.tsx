@@ -5,6 +5,8 @@ import { SectionTag } from '@site/src/pages/_components/section-tag';
 import styles from './get-started.module.css';
 import { Grid, GridItem } from '@site/src/pages/_components/grid';
 import { SectionContent } from '@site/src/pages/_components/section-content';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+import Link from '@docusaurus/Link';
 
 type Props = {
   color?: SectionColor;
@@ -27,31 +29,28 @@ function GetStarted({
       <SectionContent>
         <Grid className={styles.content} alignLast>
           <GridItem>
-            <img src="/pages/home/icon/build.svg" alt="" />
+            <img src={useBaseUrl('/pages/home/icon/build.svg')} alt="" />
             <h4>Install Sentinel</h4>
             <p>Download and install Sentinel Firewall on your Linux server</p>
-            <a href="/docs/installation" className="button">
+            <Link to="/docs/installation" className="button">
               Download Sentinel
-            </a>
+            </Link>
           </GridItem>
           <GridItem>
-            <img src="/pages/home/icon/compose.svg" alt="" />
+            <img src={useBaseUrl('/pages/home/icon/compose.svg')} alt="" />
             <h4>Upgrade from CSF</h4>
             <p>Upgrade from CSF to Sentinel on your existing server with ConfigServer Firewall</p>
-            <a
-              href="docs/upgrade-from-csf/"
-              className="button"
-            >
+            <Link to="/docs/upgrade-from-csf/" className="button">
               Upgrade from CSF
-            </a>
+            </Link>
           </GridItem>
           <GridItem>
-            <img src="/pages/home/icon/run.svg" alt="" />
+            <img src={useBaseUrl('/pages/home/icon/run.svg')} alt="" />
             <h4>Visit Docs</h4>
             <p>Read the documentation to get familiar with csf and lfd</p>
-            <a href="/docs/intro/" className="button">
+            <Link to="/docs/intro/" className="button">
               Read Documentation
-            </a>
+            </Link>
           </GridItem>
         </Grid>
       </SectionContent>
